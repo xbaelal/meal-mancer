@@ -17,7 +17,7 @@ export async function getRecipeFromMistral(ingredientsArr) {
           content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`,
         },
       ],
-      max_tokens: 500,
+      max_tokens: 2048,
     });
     return response.choices[0].message.content;
   } catch (error) {
