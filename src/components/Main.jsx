@@ -3,6 +3,7 @@ import IngredientsList from "./IngredientsList";
 import { getRecipeFromMistral } from "../ai";
 import MealRecipe from "./MealRecipe";
 import Loader from "./Loader";
+import Reset from "./Reset";
 
 const Main = () => {
   const [ingredients, setIngredients] = useState([]);
@@ -33,6 +34,10 @@ const Main = () => {
     setLoading(false);
   }
 
+  function resetIngredients() {
+    setIngredients((prevIngredients) => []);
+  }
+
   return (
     <main className="main">
       <form onSubmit={handleSubmit}>
@@ -50,7 +55,9 @@ const Main = () => {
           }}
         />
 
-        <button type="submit">+ Add Ingredient</button>
+        <button className="button-primary" type="submit">
+          + Add Ingredient
+        </button>
       </form>
       {error && <p className="red">{error}</p>}
       {ingredients.length > 0 && (
@@ -58,6 +65,7 @@ const Main = () => {
       )}
       {loading && <Loader />}
       {recipe && <MealRecipe recipe={recipe} />}
+      {recipe && <Reset resetIngredients={resetIngredients} />}
     </main>
   );
 };

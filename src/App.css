@@ -87,7 +87,8 @@ html {
 .main form input:focus {
   outline: none;
 }
-.main form button {
+
+.button-primary {
   padding: 0em 1em;
   font-weight: 500;
   font-size: 0.875em;
@@ -151,6 +152,22 @@ html {
 .generated-recipe ul li,
 .generated-recipe ol li {
   margin-bottom: 0.5em;
+}
+
+.reset-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-button {
+  margin: 1em 0;
+  padding: 1em;
+}
+
+p > em {
+  font-weight: 500;
 }
 
 .loader-container {

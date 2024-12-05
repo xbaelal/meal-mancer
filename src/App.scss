@@ -90,18 +90,18 @@ html {
     input:focus {
       outline: none;
     }
-
-    button {
-      padding: 0em 1em;
-      font-weight: 500;
-      font-size: 0.875em;
-      background-color: #141413;
-      color: #fafaf8;
-      border: none;
-      border-radius: 0.5em;
-      cursor: pointer;
-    }
   }
+}
+
+.button-primary {
+  padding: 0em 1em;
+  font-weight: 500;
+  font-size: 0.875em;
+  background-color: #141413;
+  color: #fafaf8;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
 }
 
 .ingredients-content {
@@ -161,6 +161,22 @@ html {
   ol li {
     margin-bottom: 0.5em;
   }
+}
+
+.reset-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-button {
+  margin: 1em 0;
+  padding: 1em;
+}
+
+p > em {
+  font-weight: 500;
 }
 
 .loader-container {
