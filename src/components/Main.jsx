@@ -29,6 +29,7 @@ const Main = () => {
 
   async function getRecipe() {
     setLoading(true);
+    console.log(import.meta.env.VITE_HF_ACCESS_TOKEN);
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
     setRecipe(recipeMarkdown);
     setLoading(false);
